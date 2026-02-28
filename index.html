@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Biki Haldar Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT SECTION
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding: 4rem 2rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-mf .about-img img {
+  margin-left: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*======================================
+//--//-->   SKILL SECTION
+======================================*/
+
+.skill-mf .progress {
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 5px;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+/*======================================
+//--//-->   TYPING ANIMATION
+======================================*/
+
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(190, 22, 22);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid rgb(190, 22, 22);
+  width: fit-content;
+  animation: typing 4s steps(25, end) infinite alternate;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/*======================================
+//--//-->   PROJECT ZOOM EFFECT
+======================================*/
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.zoom-effect img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.zoom-effect:hover img {
+  transform: scale(1.1);
+}
+
+/*======================================
+//--//-->   GLOBAL RESPONSIVE FIX
+======================================*/
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/*======================================
+//--//-->   TABLET (Below 992px)
+======================================*/
+
+@media (max-width: 991px) {
+
+  .about-mf .box-shadow-full {
+    padding: 3rem 1.5rem;
+  }
+
+  #typing-animation {
+    font-size: 24px;
+  }
+
+}
+
+/*======================================
+//--//-->   MOBILE (Below 768px)
+======================================*/
+
+@media (max-width: 767px) {
+
+  .about-mf .box-shadow-full {
+    padding: 2rem 1rem;
+  }
+
+  #typing-animation {
+    font-size: 20px;
+    white-space: normal;
+  }
+
+  .skill-mf .progress {
+    height: .6rem;
+  }
+
+}
+
+/*======================================
+//--//-->   SMALL MOBILE (Below 576px)
+======================================*/
+
+@media (max-width: 575px) {
+
+  #typing-animation {
+    font-size: 18px;
+  }
+
+  .about-mf .about-img img {
+    width: 90%;
+  }
+
+}
+
+/*======================================
+//--//-->   EXTRA SMALL DEVICES
+======================================*/
+
+@media (max-width: 400px) {
+
+  #typing-animation {
+    font-size: 16px;
+  }
+
+}
+
+</style>
+
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Biki</a>
+    <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav nav ml-auto">
+        <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+        <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+        <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+        <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+        <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="home-section" class="hero">
+  <div class="home-slider owl-carousel">
+    <div class="slider-item">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+          
+          <div class="one-third js-fullheight order-md-last img" style="
+    background: url('images/my-photo1.jpg') center center / contain no-repeat;
+    background-color: #000; /* optional, match hero bg */
+    position: relative;
+">
+    <div class="overlay" style="
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.4); /* dark overlay for text readability */
+    "></div>
+</div>
+          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <div class="text">
+              <span class="subheading">Hello!</span>
+              <h1 class="mb-4 mt-3">I'm <span>Biki Haldar</span></h1>
+
+              <!-- Typing Animation -->
+              <span id="typing-animation"></span>
+
+              <script>
+                const typingAnimationElement = document.getElementById('typing-animation');
+
+                const typingTexts = [
+                  'Data Analyst  ',
+                  'MERN Stack Developer  ',
+                  'AWS Cloud Engineer  ',
+                ];
+
+                function playTypingAnimation(text) {
+                  for (let i = 0; i < text.length; i++) {
+                    setTimeout(() => {
+                      typingAnimationElement.textContent += text[i];
+                    }, i * 150);
+                  }
+
+                  setTimeout(() => {
+                    typingAnimationElement.textContent = '';
+                    playTypingAnimation(
+                      typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]
+                    );
+                  }, text.length * 150);
+                }
+
+                playTypingAnimation(typingTexts[0]);
+              </script>
+
+              <br><br>
+
+              <h2>Building Data-Driven & Scalable Web Solutions</h2>
+
+              <p>
+                <a href="https://linkedin.com/in/bikihaldar/" class="btn btn-primary py-3 px-4">Linkedin</a> 
+                <a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">Hire Me</a>
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="row d-flex align-items-stretch">
+
+        <div class="col-md-6 col-lg-5 d-flex">
+          <div class="img-about img d-flex align-items-stretch">
+            <div class="overlay">
+              <div class="row">
+                <div class="col-sm-6 col-md-5">
+                  <div class="about-img">
+                    <img src="images/my-photo2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-7">
+                  <div class="about-info">
+                    <p><span class="title-s">Name: </span> <span>Biki Haldar</span></p>
+                    <p><span class="title-s">Job Role: </span> <span>Data Analyst & MERN Developer</span></p>
+                    <p><span class="title-s">Specialization: </span> <span>Machine Learning & Cloud</span></p>
+                    <p><span class="title-s">Location: </span> <span>India</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-mf">
+                <p class="title-s">Technical Skills</p>
+
+                <span>Python & Data Analysis</span> <span class="pull-right">90%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>SQL & Database Management</span> <span class="pull-right">85%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>Machine Learning</span> <span class="pull-right">80%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>MERN Stack Development</span> <span class="pull-right">85%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>AWS Cloud Services</span> <span class="pull-right">75%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+          <div class="row justify-content-start pb-3">
+            <div class="col-md-12 heading-section ftco-animate">
+
+              <h1 class="big">About</h1>
+              <h2 class="mb-4">About Me</h2>
+
+              <p>
+                I am a passionate Data Analyst and Full Stack Developer with hands-on experience 
+                in Machine Learning, Data Analytics, and MERN Stack development. 
+                I specialize in transforming raw data into actionable insights and building 
+                scalable web applications.
+              </p>
+
+              <p>
+                With practical experience in real-world projects like Courier Charge Accuracy Analysis, 
+                Healthcare Recommendation System, E-Commerce Platform, and Image Captioning models, 
+                I combine analytical thinking with strong development skills to deliver impactful solutions.
+              </p>
+
+              <ul class="about-info mt-4 px-md-0 px-2">
+                <li class="d-flex"><span>Profile:</span> <span>Data Science, Full Stack Development & Cloud</span></li>
+                <li class="d-flex"><span>Education:</span> <span>Engineering Background</span></li>
+                <li class="d-flex"><span>Languages:</span> <span>Python, JavaScript, SQL</span></li>
+                <li class="d-flex"><span>Frameworks:</span> <span>React.js, Node.js, Express.js</span></li>
+                <li class="d-flex"><span>Cloud:</span> <span>AWS (EC2, S3, IAM)</span></li>
+                <li class="d-flex"><span>Tools:</span> <span>Git, GitHub, Power BI, Excel</span></li>
+                <li class="d-flex"><span>Interest:</span> <span>Building Scalable Systems & Data-Driven Solutions</span></li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+            <div class="text">
+              <p class="mb-4">
+                <span class="number" data-number="10">0</span>
+                <span>+</span>
+                <span>&nbsp; Completed Projects</span>
+              </p>
+              <p>
+                <a href="https://github.com/biki886" class="btn btn-primary py-3 px-3">
+                  Visit GitHub
+                </a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-10 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Resume</h1>
+        <h2 class="mb-4">Resume</h2>
+        <p>
+          Entry-level professional seeking opportunities in Data Science & Analytics, 
+          MERN Full Stack Development, or AWS Cloud Support. Skilled in Python, SQL, AWS, 
+          backend development, and data analysis.
+        </p>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="row">
+      <h1 class="big-4">Experience</h1>
+      <div class="underline"></div>
+    </div>
+    <br>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="resume-wrap ftco-animate">
+          <span class="date">Jan 2023 – Present</span>
+          <h2>Operating Engineer</h2>
+          <span class="position">Astemo FIE Pvt. Ltd.</span>
+          <p class="mt-4">
+            <ul>
+              <li>Operated production machinery and maintained shift documentation.</li>
+              <li>Conducted quality inspections and process monitoring.</li>
+              <li>Implemented TPM & 5S methodologies to improve efficiency.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="resume-wrap ftco-animate">
+          <span class="date">Aug 2025 – Nov 2025</span>
+          <h2>Data Science & Analytics Intern</h2>
+          <span class="position">Zidio Development</span>
+          <p class="mt-4">
+            <ul>
+              <li>Performed data cleaning and preprocessing using Python (Pandas, NumPy).</li>
+              <li>Conducted exploratory data analysis and report generation.</li>
+              <li>Worked on ML models for predictive analysis.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="resume-wrap ftco-animate">
+          <span class="date">Jun 2025 – Oct 2025</span>
+          <h2>MERN Stack Developer Intern</h2>
+          <span class="position">TopStack India</span>
+          <p class="mt-4">
+            <ul>
+              <li>Built full-stack applications using MongoDB, Express.js, React.js, Node.js.</li>
+              <li>Designed responsive UI using Tailwind CSS.</li>
+              <li>Developed RESTful APIs and backend integration.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="resume-wrap ftco-animate">
+          <span class="date">Jan 2024 – Jun 2024</span>
+          <h2>AWS Cloud Intern</h2>
+          <span class="position">DH Technologies</span>
+          <p class="mt-4">
+            <ul>
+              <li>Managed AWS services including EC2, S3, IAM.</li>
+              <li>Assisted in deployments, networking, and monitoring (CloudWatch).</li>
+              <li>Worked with Linux server configuration and security groups.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <br><br>
+
+    <!-- EDUCATION -->
+    <div class="row">
+      <h1 class="big-4">Education</h1>
+      <div class="underline"></div>
+    </div>
+    <br>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="resume-wrap ftco-animate">
+          <span class="date">Jul 2021 – Aug 2024</span>
+          <h2>Bachelor of Technology – Mechanical Engineering</h2>
+          <span class="position">Seacom Skills University</span>
+          <p class="mt-4">GPA: 8.4</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="resume-wrap ftco-animate">
+          <span class="date">Aug 2018 – Jun 2021</span>
+          <h2>Diploma – Automobile Engineering</h2>
+          <span class="position">Malda Polytechnic</span>
+          <p class="mt-4">GPA: 7.7</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6 text-center ftco-animate">
+        <p><a href="/Biki_Haldar_Resume.pdf" download class="btn btn-primary py-4 px-5">
+  Download CV
+</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-5">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Projects</h1>
+        <h2 class="mb-4">Projects</h2>
+        <p>Here are some of my featured projects in Web Development, Machine Learning & Data Analytics.</p>
+      </div>
+    </div>
+
+    <div class="row d-flex">
+
+      <!-- Project 1 -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="https://github.com/biki886/B2B-Courier-Charges-Accuracy-Analysis" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/project-1.jpg');">
+          </a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading">
+              <a href="https://github.com/biki886/B2B-Courier-Charges-Accuracy-Analysis" target="_blank">
+                B2B Courier Charges Accuracy Analysis
+              </a>
+            </h3>
+            <p>Analyzed courier billing data using Python & Excel to detect overcharges and improve cost accuracy for B2B logistics operations.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="https://github.com/biki886/Image-Captioning-and-Segmentation" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/project-2.jpg');">
+          </a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading">
+              <a href="https://github.com/biki886/Image-Captioning-and-Segmentation" target="_blank">
+                Image Captioning & Segmentation
+              </a>
+            </h3>
+            <p>Built a deep learning model for automatic image caption generation and semantic segmentation using CNN & NLP techniques.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry">
+          <a href="https://github.com/biki886/Healthcare-Recommendation-System" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/project-3.jpg');">
+          </a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading">
+              <a href="https://github.com/biki886/Healthcare-Recommendation-System" target="_blank">
+                Healthcare Recommendation System
+              </a>
+            </h3>
+            <p>Developed a machine learning based healthcare recommendation system to suggest treatments and improve patient decision support.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+
+    <div class="row d-flex justify-content-center">
+
+      <!-- Project 4 -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="https://github.com/biki886/Hotel-Booking-System" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/project-4.jpg');">
+          </a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading">
+              <a href="https://github.com/biki886/Hotel-Booking-System" target="_blank">
+                Hotel Booking System
+              </a>
+            </h3>
+            <p>Full-stack hotel reservation system with booking management, user authentication and admin dashboard features.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="https://github.com/biki886/E-Commerce-Website" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/project-5.jpg');">
+          </a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading">
+              <a href="https://github.com/biki886/E-Commerce-Website" target="_blank">
+                E-Commerce Website
+              </a>
+            </h3>
+            <p>Responsive e-commerce web application with product management, cart system and secure checkout functionality.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+          <a href="https://github.com/biki886/Student-Depression-Analytics" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/project-6.jpg');">
+          </a>
+          <div class="text mt-3 float-right d-block">
+            <h3 class="heading">
+              <a href="https://github.com/biki886/Student-Depression-Analytics" target="_blank">
+                Student Depression Analytics
+              </a>
+            </h3>
+            <p>Performed data analysis and machine learning modeling to identify mental health risk patterns among students.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br><br>
+
+    <div class="row justify-content-center">
+      <div class="col-md-7 text-center ftco-animate">
+        <h4>More projects available on my GitHub</h4>
+        <p>
+          <a href="https://github.com/biki886" target="_blank" class="btn btn-primary py-3 px-5">
+            Visit GitHub
+          </a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+  <div class="container">
+    <div class="row d-md-flex align-items-center">
+
+      <!-- Total Projects -->
+      <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text">
+            <strong class="number" data-number="7">0</strong>
+            <span>Total Projects</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ML / AI Projects -->
+      <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text">
+            <strong class="number" data-number="3">0</strong>
+            <span>ML / AI Projects</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Applications -->
+      <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text">
+            <strong class="number" data-number="3">0</strong>
+            <span>Web Applications</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Analytics Projects -->
+      <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text">
+            <strong class="number" data-number="1">0</strong>
+            <span>Data Analytics</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- GitHub CTA Section -->
+  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+    <div class="row justify-content-center">
+      <div class="col-md-7 ftco-animate text-center">
+        <h2>Explore More Projects on <span>GitHub</span></h2>
+        <div class="heading">
+          <h4>I build real-world Machine Learning models & Full-Stack Web Applications</h4>
+          <br>
+          <p>
+            <a href="https://github.com/biki886" target="_blank" class="btn btn-primary py-3 px-5">
+              Visit My GitHub
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+ <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Contact</h1>
+        <h2 class="mb-4">Contact Me</h2>
+        <p>Below are the details to reach out to me!</p>
+      </div>
+    </div>
+
+    <div class="row d-flex contact-info mb-5">
+      
+      <!-- Address -->
+      <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+        <div class="align-self-stretch box p-4 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-map-signs"></span>
+          </div>
+          <h3 class="mb-4">Address</h3>
+          <p>Malda, West Bengal, India</p>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+        <div class="align-self-stretch box p-4 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-phone2"></span>
+          </div>
+          <h3 class="mb-4">Contact Number</h3>
+          <p><a href="tel:+918944000886">+91 89440 00886</a></p>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+        <div class="align-self-stretch box p-4 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-paper-plane"></span>
+          </div>
+          <h3 class="mb-4">Email Address</h3>
+          <p><a href="mailto:bikihaldar2454@gmail.com">bikihaldar2454@gmail.com</a></p>
+        </div>
+      </div>
+
+      <!-- Resume -->
+      <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+        <div class="align-self-stretch box p-4 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-globe"></span>
+          </div>
+          <h3 class="mb-4">Download Resume</h3>
+          <p><a href="Biki_Haldar_Resume.pdf" target="_blank">Download CV</a></p>
+        </div>
+      </div>
+
+      <div class="container">
+        <br>
+        <br>
+        <div class="row justify-content-center">
+          <div class="col-md-7 ftco-animate text-center">
+            <h2>Have a<span> Question? </span> 
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfegOHe5zJQ__4Pl4lurboVqb40vfToOoTKnOawESOO4mTkow/viewform?usp=header" class="btn btn-primary py-3 px-5">
+                Click Here
+              </a>
+            </h2>
+          </div>
+        </div>
+
+        <br>
+
+       <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+  <li class="ftco-animate normal-txt">Find me on</li>
+
+  <!-- GitHub -->
+  <li class="ftco-animate">
+    <a href="https://github.com/biki886" target="_blank">
+      <span class="icon-github"></span>
+    </a>
+  </li>
+
+  <!-- LinkedIn -->
+  <li class="ftco-animate">
+    <a href="https://linkedin.com/in/bikihaldar/" target="_blank">
+      <span class="icon-linkedin"></span>
+    </a>
+  </li>
+
+  <!-- Facebook -->
+  <li class="ftco-animate">
+    <a href="https://facebook.com/bikihaldar2454" target="_blank">
+      <span class="icon-facebook"></span>
+    </a>
+  </li>
+
+  <!-- Instagram -->
+  <li class="ftco-animate">
+    <a href="https://www.instagram.com/biki_haldar?igsh=MW44NmtqNHp4bnV5Yw==" target="_blank">
+      <span class="icon-instagram"></span>
+    </a>
+  </li>
+
+  <!-- Twitter / X -->
+  <li class="ftco-animate">
+    <a href="https://twitter.com/your-twitter-username" target="_blank">
+      <span class="icon-twitter"></span>
+    </a>
+  </li>
+</ul>
+
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="ftco-footer ftco-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
+          All rights reserved | Made with 
+          <i class="icon-heart color-danger" aria-hidden="true"></i> 
+          by Biki Haldar
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
