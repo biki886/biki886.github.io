@@ -12,7 +12,7 @@ I enjoy building modern, responsive, and user-friendly websites.
 
 - 💻 **Tech Stack:** HTML, CSS, JavaScript, React
 - 🌱 **Learning:** Continuously exploring new web technologies
-- 📫 **Contact:** [your.email@example.com](mailto:your.email@example.com)
+- 📫 **Contact:** [your.bikihaldar2454@gmail.com](mailto:your.email@example.com)
 
 ---
 
