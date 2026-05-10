@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biki Haldar — Developer & Data Analyst</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -17,21 +18,26 @@
       /* ROOT & RESET  */
 
       :root {
-        --gold: #c9a96e;
-        --gold-light: #e8d5b0;
-        --gold-dark: #8b6e3f;
-        --ink: #07070a;
-        --ink2: #0e0e14;
-        --ink3: #16161f;
-        --ink4: #1e1e2a;
-        --smoke: rgba(255, 255, 255, 0.06);
-        --smoke2: rgba(255, 255, 255, 0.03);
-        --border: rgba(201, 169, 110, 0.15);
-        --border2: rgba(201, 169, 110, 0.08);
-        --text: #f5f0e8;
-        --muted: #7a7570;
-        --muted2: #a09888;
-        --ff-serif: "Cormorant Garamond", Georgia, serif;
+        --accent: #57c7ff;
+        --accent-light: #8be4ff;
+        --accent-dark: #1f78b4;
+        --gold: var(--accent);
+        --gold-light: var(--accent-light);
+        --gold-dark: var(--accent-dark);
+        --ink: #06080f;
+        --ink2: #0d1322;
+        --ink3: #121b2d;
+        --ink4: #18243d;
+        --glass: rgba(12, 20, 36, 0.72);
+        --glass-strong: rgba(10, 15, 28, 0.88);
+        --glass-soft: rgba(17, 27, 49, 0.68);
+        --border: rgba(87, 199, 255, 0.16);
+        --border2: rgba(87, 199, 255, 0.08);
+        --text: #f8fbff;
+        --muted: #97a8c0;
+        --muted2: #86a3c5;
+        --ff-heading: "Poppins", sans-serif;
+        --ff-serif: var(--ff-heading);
         --ff-sans: "Outfit", sans-serif;
         --ease-luxury: cubic-bezier(0.76, 0, 0.24, 1);
       }
@@ -47,13 +53,15 @@
         font-size: 16px;
       }
       body {
-        background: var(--ink);
+        min-height: 100vh;
+        background: radial-gradient(circle at top, rgba(87, 199, 255, 0.08), transparent 22%),
+          linear-gradient(180deg, #070b14 0%, #06080f 55%, #070b13 100%);
         color: var(--text);
         font-family: var(--ff-sans);
         font-weight: 300;
         line-height: 1.7;
         overflow-x: hidden;
-        cursor: none;
+        position: relative;
       }
 
       /* CUSTOM CURSOR */
@@ -62,7 +70,8 @@
         position: fixed;
         width: 10px;
         height: 10px;
-        background: var(--gold);
+        background: var(--accent);
+        box-shadow: 0 0 18px rgba(87, 199, 255, 0.35);
         border-radius: 50%;
         pointer-events: none;
         z-index: 99999;
@@ -75,7 +84,7 @@
         position: fixed;
         width: 40px;
         height: 40px;
-        border: 1px solid rgba(201, 169, 110, 0.5);
+        border: 1px solid rgba(87, 199, 255, 0.45);
         border-radius: 50%;
         pointer-events: none;
         z-index: 99998;
@@ -86,7 +95,7 @@
           border-color 0.3s;
       }
       body:hover #cursor-ring {
-        border-color: rgba(201, 169, 110, 0.7);
+        border-color: rgba(87, 199, 255, 0.75);
       }
 
       /* NOISE LAYER */
@@ -127,55 +136,58 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        background: rgba(6, 10, 18, 0.45);
+        backdrop-filter: blur(22px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         transition:
-          background 0.5s,
-          border-color 0.5s;
+          background 0.35s,
+          border-color 0.35s,
+          transform 0.35s;
       }
       #nav.scrolled {
-        background: rgba(7, 7, 10, 0.92);
-        backdrop-filter: blur(24px);
-        border-bottom: 1px solid var(--border2);
+        background: rgba(6, 10, 18, 0.82);
+        border-bottom-color: rgba(87, 199, 255, 0.12);
       }
       .nav-logo {
-        font-family: var(--ff-serif);
-        font-size: 1.6rem;
-        font-weight: 600;
-        color: var(--gold);
+        font-family: var(--ff-heading);
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--accent);
         letter-spacing: 0.04em;
         text-decoration: none;
       }
       .nav-logo span {
         font-style: italic;
-        font-weight: 300;
-        color: var(--gold-light);
+        font-weight: 500;
+        color: var(--text);
       }
       .nav-links {
         display: flex;
-        gap: 2.5rem;
+        gap: 2rem;
         list-style: none;
       }
       .nav-links a {
-        font-size: 0.75rem;
-        font-weight: 400;
+        font-size: 0.78rem;
+        font-weight: 500;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: var(--muted2);
+        color: var(--muted);
         text-decoration: none;
-        transition: color 0.3s;
+        transition: color 0.25s;
         position: relative;
       }
       .nav-links a::after {
         content: "";
         position: absolute;
-        bottom: -4px;
+        bottom: -5px;
         left: 0;
         width: 0;
-        height: 1px;
-        background: var(--gold);
-        transition: width 0.4s var(--ease-luxury);
+        height: 2px;
+        background: var(--accent);
+        transition: width 0.3s var(--ease-luxury);
       }
       .nav-links a:hover {
-        color: var(--gold-light);
+        color: var(--text);
       }
       .nav-links a:hover::after {
         width: 100%;
@@ -184,14 +196,16 @@
         font-size: 0.72rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: var(--gold);
-        border: 1px solid var(--border);
-        padding: 9px 22px;
+        color: var(--text);
+        border: 1px solid rgba(87, 199, 255, 0.35);
+        padding: 11px 24px;
         text-decoration: none;
-        transition: all 0.4s var(--ease-luxury);
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(87, 199, 255, 0.18), rgba(72, 138, 212, 0.1));
+        transition: all 0.3s var(--ease-luxury);
       }
       .nav-hire:hover {
-        background: var(--gold);
+        background: linear-gradient(135deg, var(--accent), var(--accent-light));
         color: var(--ink);
       }
       .nav-burger {
@@ -382,28 +396,23 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: var(--gold);
+        background: linear-gradient(135deg, rgba(87, 199, 255, 0.98), rgba(96, 173, 255, 0.92));
         color: var(--ink);
-        font-size: 0.72rem;
+        font-size: 0.8rem;
         font-weight: 600;
-        letter-spacing: 0.14em;
+        letter-spacing: 0.13em;
         text-transform: uppercase;
-        padding: 15px 32px;
+        padding: 15px 34px;
         text-decoration: none;
-        transition: all 0.4s var(--ease-luxury);
+        transition: transform 0.3s, box-shadow 0.3s;
         position: relative;
         overflow: hidden;
+        border-radius: 999px;
+        box-shadow: 0 18px 40px rgba(87, 199, 255, 0.15);
       }
-      .btn-gold::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: var(--gold-light);
-        transform: translateX(-101%);
-        transition: transform 0.4s var(--ease-luxury);
-      }
-      .btn-gold:hover::before {
-        transform: translateX(0);
+      .btn-gold:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 24px 50px rgba(87, 199, 255, 0.2);
       }
       .btn-gold span {
         position: relative;
@@ -413,19 +422,22 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        border: 1px solid var(--border);
-        color: var(--muted2);
-        font-size: 0.72rem;
-        font-weight: 400;
+        border: 1px solid rgba(87, 199, 255, 0.22);
+        color: var(--text);
+        font-size: 0.78rem;
+        font-weight: 500;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        padding: 15px 32px;
+        padding: 15px 34px;
         text-decoration: none;
-        transition: all 0.4s var(--ease-luxury);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.03);
+        transition: all 0.3s var(--ease-luxury);
       }
       .btn-ghost:hover {
-        border-color: var(--gold);
-        color: var(--gold);
+        border-color: var(--accent);
+        color: var(--accent);
+        background: rgba(87, 199, 255, 0.08);
       }
 
       /* HERO RIGHT - photo side */
@@ -756,7 +768,7 @@
       .about-grid {
         display: grid;
         grid-template-columns: 420px 1fr;
-        gap: 6rem;
+        gap: 5rem;
         align-items: start;
       }
       .about-photo-side {
@@ -765,9 +777,13 @@
       }
       .about-frame {
         position: relative;
-        border: 1px solid var(--border2);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         padding: 12px;
         margin-bottom: 2rem;
+        border-radius: 32px;
+        background: rgba(255, 255, 255, 0.03);
+        box-shadow: 0 28px 70px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(20px);
       }
       .about-frame::before {
         content: "";
@@ -776,7 +792,8 @@
         left: -1px;
         right: -1px;
         bottom: -1px;
-        border: 1px solid var(--border);
+        border-radius: 32px;
+        border: 1px solid rgba(87, 199, 255, 0.15);
         pointer-events: none;
       }
       .about-frame::after {
@@ -810,12 +827,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1px;
-        border: 1px solid var(--border2);
       }
       .about-meta-cell {
-        padding: 14px 16px;
-        background: var(--smoke2);
-        border-right: 1px solid var(--border2);
+        padding: 18px 18px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(16px);
       }
       .about-meta-cell:nth-child(even) {
         border-right: none;
@@ -838,7 +855,7 @@
       .about-content p {
         color: var(--muted2);
         font-size: 0.95rem;
-        line-height: 2;
+        line-height: 1.9;
         margin-bottom: 1.5rem;
       }
       .about-list {
@@ -1109,17 +1126,21 @@
         border: 1px solid var(--border2);
       }
       .proj-card {
-        background: var(--ink2);
+        background: rgba(255, 255, 255, 0.04);
         padding: 2rem;
         position: relative;
         overflow: hidden;
-        transition: background 0.4s var(--ease-luxury);
+        transition: transform 0.35s var(--ease-luxury), background 0.35s;
         display: flex;
         flex-direction: column;
-        cursor: none;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 28px;
+        backdrop-filter: blur(18px);
+        box-shadow: 0 25px 55px rgba(0, 0, 0, 0.22);
       }
       .proj-card:hover {
-        background: var(--ink3);
+        transform: translateY(-6px);
+        background: rgba(87, 199, 255, 0.08);
       }
 
       /* Gold corner on hover */
@@ -1294,15 +1315,19 @@
         margin-top: 3rem;
       }
       .contact-card {
-        background: var(--ink);
+        background: rgba(255, 255, 255, 0.025);
         padding: 2.5rem;
         display: flex;
         align-items: flex-start;
         gap: 1.5rem;
-        transition: background 0.3s;
+        transition: transform 0.25s, background 0.25s;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 28px;
+        backdrop-filter: blur(18px);
       }
       .contact-card:hover {
-        background: var(--ink2);
+        transform: translateY(-4px);
+        background: rgba(87, 199, 255, 0.1);
       }
       .contact-icon-wrap {
         width: 48px;
@@ -1662,7 +1687,7 @@
           >
         </div>
 
-        <div class="hero-eyebrow">Available for opportunities</div>
+        <div class="hero-eyebrow">MERN Stack Developer • AWS Cloud • UI-focused</div>
         <h1 class="hero-name">I'm<br /><em>Biki Haldar</em></h1>
 
         <div class="hero-typing-line">
@@ -1670,8 +1695,8 @@
         </div>
 
         <p class="hero-tagline">
-          Building Data-Driven & Scalable Web Solutions — transforming raw data
-          into actionable insights and shipping full-stack applications.
+          Modern web apps built with React, Tailwind, Node.js and AWS — clean,
+          dark UI with production-ready architecture and smooth interactions.
         </p>
 
         <div class="hero-ctas">
@@ -1700,12 +1725,12 @@
             src="images/my-photo1.jpg"
             alt="Biki Haldar"
             onerror="
-              this.src = 'https://placehold.co/800x900/0e0e14/c9a96e?text=BH'
+              this.src = 'https://placehold.co/800x900/0e0e14/57c7ff?text=BH'
             "
           />
         </div>
         <div class="hero-corner">
-          <div class="hero-corner-tag">Data · MERN · AWS</div>
+          <div class="hero-corner-tag">MERN · React · Tailwind</div>
           <div class="hero-corner-line"></div>
         </div>
       </div>
@@ -1721,7 +1746,7 @@
                 alt="Biki Haldar"
                 onerror="
                   this.src =
-                    'https://placehold.co/400x520/0e0e14/c9a96e?text=BH'
+                    'https://placehold.co/400x520/0e0e14/57c7ff?text=BH'
                 "
               />
               <div class="about-frame-br"></div>
@@ -1751,51 +1776,45 @@
             <h2 class="sec-title reveal reveal-delay-1">About <em>Me</em></h2>
 
             <p class="reveal reveal-delay-2">
-              I am a passionate Data Analyst and Full Stack Developer with
-              hands-on experience in Machine Learning, Data Analytics, and MERN
-              Stack development. I specialize in transforming raw data into
-              actionable insights and building scalable web applications.
+              MERN Stack Developer with hands-on experience in building full-stack
+              applications using MongoDB, Express.js, React.js, and Node.js.
+              Skilled in creating RESTful APIs, JWT authentication, and responsive
+              user interfaces with Tailwind CSS.
             </p>
             <p class="reveal reveal-delay-2">
-              With practical experience in real-world projects like Courier
-              Charge Accuracy Analysis, Healthcare Recommendation System,
-              E-Commerce Platform, and Image Captioning models, I combine
-              analytical thinking with strong development skills to deliver
-              impactful solutions.
+              I build modern web projects with clean architecture, smooth UX, and
+              cloud-ready deployment patterns. My focus is on fast interfaces,
+              professional polish, and real production value.
             </p>
 
             <ul class="about-list reveal reveal-delay-3">
               <li>
                 <span class="lk">Profile</span
-                ><span class="lv"
-                  >Data Science, Full Stack Development & Cloud</span
-                >
+                ><span class="lv">MERN Stack Developer & Data Analyst</span>
               </li>
               <li>
                 <span class="lk">Education</span
-                ><span class="lv">Engineering Background</span>
+                ><span class="lv">B.Tech Mechanical Engineering</span>
               </li>
               <li>
-                <span class="lk">Languages</span
-                ><span class="lv">Python, JavaScript, SQL</span>
+                <span class="lk">Programming</span
+                ><span class="lv">Python, JavaScript, SQL, HTML, CSS</span>
               </li>
               <li>
-                <span class="lk">Frameworks</span
-                ><span class="lv">React.js, Node.js, Express.js</span>
+                <span class="lk">Web</span
+                ><span class="lv">React.js, Node.js, Express.js, MongoDB, Tailwind</span>
               </li>
               <li>
                 <span class="lk">Cloud</span
-                ><span class="lv">AWS (EC2, S3, IAM)</span>
+                ><span class="lv">AWS EC2, S3, IAM, Lambda, CloudWatch</span>
               </li>
               <li>
                 <span class="lk">Tools</span
-                ><span class="lv">Git, GitHub, Power BI, Excel</span>
+                ><span class="lv">Git, VS Code, Postman, Power BI, Jupyter</span>
               </li>
               <li>
-                <span class="lk">Interest</span
-                ><span class="lv"
-                  >Scalable Systems & Data-Driven Solutions</span
-                >
+                <span class="lk">Focus</span
+                ><span class="lv">Responsive UI, Clean Code, Scalable Apps</span>
               </li>
             </ul>
 
@@ -1871,18 +1890,18 @@
       <div class="stats-inner">
         <div class="stat-block reveal">
           <div class="stat-num counter" data-target="7">0</div>
-          <div class="stat-label">Total Projects</div>
+          <div class="stat-label">Projects Delivered</div>
         </div>
         <div class="stat-block reveal reveal-delay-1">
           <div class="stat-num counter" data-target="3">0</div>
-          <div class="stat-label">ML / AI Projects</div>
+          <div class="stat-label">Live Web Apps</div>
         </div>
         <div class="stat-block reveal reveal-delay-2">
           <div class="stat-num counter" data-target="3">0</div>
-          <div class="stat-label">Web Applications</div>
+          <div class="stat-label">ML / AI Builds</div>
         </div>
         <div class="stat-block reveal reveal-delay-3">
-          <div class="stat-num counter" data-target="4">0</div>
+          <div class="stat-num counter" data-target="2">0</div>
           <div class="stat-label">Internships</div>
         </div>
       </div>
@@ -1896,9 +1915,9 @@
           Resume <em>&amp; Experience</em>
         </h2>
         <p class="sec-sub reveal reveal-delay-2">
-          Entry-level professional seeking opportunities in Data Science &
-          Analytics, MERN Full Stack Development, or AWS Cloud Support. Skilled
-          in Python, SQL, AWS, backend development, and data analysis.
+          MERN Stack Developer with hands-on experience in building full-stack
+          applications, JWT-based authentication, responsive Tailwind UI, and
+          AWS-backed deployments. Ready to deliver modern web products.
         </p>
 
         <div class="resume-layout">
@@ -2053,11 +2072,12 @@
           <div>
             <div class="sec-label reveal">What I've built</div>
             <h2 class="sec-title reveal reveal-delay-1">
-              Selected <em>Projects</em>
+              Featured <em>Projects</em>
             </h2>
           </div>
-          <p class="sec-sub reveal" style="max-width: 320px">
-            Featured work in Web Development, Machine Learning & Data Analytics.
+          <p class="sec-sub reveal" style="max-width: 360px">
+            Real MERN applications built with modern UI, cloud integration, and
+            polished frontend experiences.
           </p>
         </div>
 
@@ -2066,24 +2086,23 @@
             <div class="proj-thumb">
               <img
                 src="images/project-1.jpg"
-                alt="B2B Courier Charges Accuracy Analysis"
+                alt="SpareExpress Auto Parts E-Commerce"
               />
             </div>
             <div class="proj-num">01</div>
-            <div class="proj-cat">Data Analytics</div>
+            <div class="proj-cat">MERN E-Commerce</div>
             <a
-              href="https://github.com/biki886/B2B-Courier-Charges-Accuracy-Analysis"
+              href="https://github.com/biki886/E-Commerce-Website.git"
               class="proj-title"
               target="_blank"
-              >B2B Courier Charges Accuracy Analysis</a
+              >SpareExpress: Auto Parts Platform</a
             >
             <p class="proj-desc">
-              Analyzed courier billing data using Python & Excel to detect
-              overcharges and improve cost accuracy for B2B logistics
-              operations.
+              Built a full-stack auto parts marketplace with product browsing,
+              cart, checkout and order management powered by MongoDB and Stripe.
             </p>
             <a
-              href="https://github.com/biki886/B2B-Courier-Charges-Accuracy-Analysis"
+              href="https://github.com/biki886/E-Commerce-Website.git"
               class="proj-link"
               target="_blank"
               >View Project</a
@@ -2093,23 +2112,23 @@
             <div class="proj-thumb">
               <img
                 src="images/project-2.jpg"
-                alt="Image Captioning & Segmentation"
+                alt="LinkedIn clone social media platform"
               />
             </div>
             <div class="proj-num">02</div>
-            <div class="proj-cat">Deep Learning</div>
+            <div class="proj-cat">Social Network</div>
             <a
-              href="https://github.com/biki886/Image-Captioning-and-Segmentation"
+              href="https://github.com/biki886/LinkedIn_Clone.git"
               class="proj-title"
               target="_blank"
-              >Image Captioning & Segmentation</a
+              >LinkedIn Clone: Social Media App</a
             >
             <p class="proj-desc">
-              Built a deep learning model for automatic image caption generation
-              and semantic segmentation using CNN & NLP techniques.
+              Created a LinkedIn-inspired platform with auth, posts, likes,
+              comments, connections, and responsive Tailwind UI.
             </p>
             <a
-              href="https://github.com/biki886/Image-Captioning-and-Segmentation"
+              href="https://github.com/biki886/LinkedIn_Clone.git"
               class="proj-link"
               target="_blank"
               >View Project</a
@@ -2119,95 +2138,23 @@
             <div class="proj-thumb">
               <img
                 src="images/project-3.jpg"
-                alt="Healthcare Recommendation System"
+                alt="AI Virtual Assistant"
               />
             </div>
             <div class="proj-num">03</div>
-            <div class="proj-cat">Machine Learning</div>
+            <div class="proj-cat">AI Assistant</div>
             <a
-              href="https://github.com/biki886/Healthcare-Recommendation-System"
+              href="https://github.com/biki886/AI-Virtual-Assistant--MERN.git"
               class="proj-title"
               target="_blank"
-              >Healthcare Recommendation System</a
+              >AI Virtual Assistant</a
             >
             <p class="proj-desc">
-              Developed an ML-based healthcare recommendation system to suggest
-              treatments and improve patient decision support.
+              Developed a conversational AI assistant with real-time responses,
+              secure auth, and clean interface using React and Tailwind.
             </p>
             <a
-              href="https://github.com/biki886/Healthcare-Recommendation-System"
-              class="proj-link"
-              target="_blank"
-              >View Project</a
-            >
-          </div>
-          <div class="proj-card reveal reveal-delay-1">
-            <div class="proj-thumb">
-              <img src="images/project-4.jpg" alt="Hotel Booking System" />
-            </div>
-            <div class="proj-num">04</div>
-            <div class="proj-cat">Full Stack</div>
-            <a
-              href="https://github.com/biki886/Hotel-Booking-System"
-              class="proj-title"
-              target="_blank"
-              >Hotel Booking System</a
-            >
-            <p class="proj-desc">
-              Full-stack hotel reservation system with booking management, user
-              authentication and admin dashboard features.
-            </p>
-            <a
-              href="https://github.com/biki886/Hotel-Booking-System"
-              class="proj-link"
-              target="_blank"
-              >View Project</a
-            >
-          </div>
-          <div class="proj-card reveal reveal-delay-2">
-            <div class="proj-thumb">
-              <img src="images/project-5.jpg" alt="E-Commerce Website" />
-            </div>
-            <div class="proj-num">05</div>
-            <div class="proj-cat">MERN Stack</div>
-            <a
-              href="https://github.com/biki886/E-Commerce-Website"
-              class="proj-title"
-              target="_blank"
-              >E-Commerce Website</a
-            >
-            <p class="proj-desc">
-              Responsive e-commerce web application with product management,
-              cart system and secure checkout functionality.
-            </p>
-            <a
-              href="https://github.com/biki886/E-Commerce-Website"
-              class="proj-link"
-              target="_blank"
-              >View Project</a
-            >
-          </div>
-          <div class="proj-card reveal reveal-delay-3">
-            <div class="proj-thumb">
-              <img
-                src="images/project-6.jpg"
-                alt="Student Depression Analytics"
-              />
-            </div>
-            <div class="proj-num">06</div>
-            <div class="proj-cat">Data Science</div>
-            <a
-              href="https://github.com/biki886/Student-Depression-Analytics"
-              class="proj-title"
-              target="_blank"
-              >Student Depression Analytics</a
-            >
-            <p class="proj-desc">
-              Data analysis and machine learning modeling to identify mental
-              health risk patterns among students.
-            </p>
-            <a
-              href="https://github.com/biki886/Student-Depression-Analytics"
+              href="https://github.com/biki886/AI-Virtual-Assistant--MERN.git"
               class="proj-link"
               target="_blank"
               >View Project</a
@@ -2380,12 +2327,12 @@
           el.addEventListener("mouseenter", () => {
             ring.style.width = "70px";
             ring.style.height = "70px";
-            ring.style.borderColor = "rgba(201,169,110,0.4)";
+            ring.style.borderColor = "rgba(87,199,255,0.6)";
           });
           el.addEventListener("mouseleave", () => {
             ring.style.width = "40px";
             ring.style.height = "40px";
-            ring.style.borderColor = "rgba(201,169,110,0.5)";
+            ring.style.borderColor = "rgba(87,199,255,0.45)";
           });
         });
 
@@ -2406,9 +2353,9 @@
 
       // Typing
       const texts = [
-        "Data Analyst",
         "MERN Stack Developer",
-        "AWS Cloud Engineer",
+        "LinkedIn Clone Creator",
+        "AI-Powered Assistant Builder",
       ];
       let ti = 0,
         ci = 0,
