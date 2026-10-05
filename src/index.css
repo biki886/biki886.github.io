@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { @apply bg-slate-50 text-slate-700 antialiased font-sans dark:bg-[#070b17] dark:text-slate-300 transition-colors duration-300; }
+  ::selection { @apply bg-indigo-500/30; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-indigo-500; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+}
+
+@layer components {
+  .grad-text { @apply bg-gradient-to-r from-indigo-500 via-violet-500 to-cyan-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient; }
+  .grad-bg { @apply bg-gradient-to-r from-indigo-500 via-violet-500 to-cyan-500; }
+  .glass { @apply rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-md shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:shadow-none; }
+  .section { @apply mx-auto max-w-6xl px-5 py-24 sm:px-8; }
+  .chip { @apply rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300; }
+}
